@@ -7,8 +7,11 @@ class T {
   langData: LocaleData;
   constructor(lang: string) {
     this.lang = lang;
-    try {  this.langData = require(`@/app/locales/${this.lang}.json`) } 
-    catch { this.langData = require("@?app/locales/ar.json") }
+    try {
+      this.langData = require(`@/app/locales/${this.lang}.json`);
+    } catch {
+      this.langData = require("@/app/locales/ar.json");
+    }
   }
   translate(keyword: string) {
     // @ts-ignore
