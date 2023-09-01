@@ -6,7 +6,7 @@ const t = new T("ar");
 
 export const metadata: Metadata = {
   title: "Hadith | Homepage",
-  description: "pageTitle",
+  description: "Random hadith for every refresh. Know more ahadeith.",
 };
 
 export default async function Home() {
