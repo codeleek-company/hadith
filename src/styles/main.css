@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("./font.css");
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.rwd {
+  font-family: "Ruwudu";
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  font-family: monospace;
+  background: #2b2509;
+  min-height: 100vh;
+}
+.rtl {
+  direction: rtl;
+}
+
+@keyframes rotateAround {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--main-color);
+}
+::-webkit-scrollbar-thumb {
+  background-color: #312b50;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: indianred;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 10px solid;
+  border-color: rgb(35, 27, 41) rgb(35, 27, 41) rgb(35, 27, 41) transparent;
+  animation: infinite 1s rotateAround;
+}
