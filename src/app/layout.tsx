@@ -1,5 +1,11 @@
 import Header from "@/components/ui/header";
 import "@/styles/main.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Hadith | Homepage",
+  description: "Random hadith for every refresh. Know more ahadeith.",
+};
 
 export default function RootLayout({
   children,
@@ -8,10 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <Header />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

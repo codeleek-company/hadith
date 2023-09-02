@@ -10,13 +10,12 @@ class T {
     try {
       this.langData = require(`@/app/locales/${this.lang}.json`);
     } catch {
-      this.langData = require("@/app/locales/ar.json");
+      this.langData = require("@/app/locales/en.json");
     }
   }
   translate(keyword: string) {
     // @ts-ignore
     return this.langData[keyword];
-    // return keyword;
   }
 }
 

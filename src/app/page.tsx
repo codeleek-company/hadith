@@ -1,14 +1,12 @@
-import type { Metadata } from "next";
+"use client";
+
 import { redirect } from "next/navigation";
+import { useEffect } from "react";
 
-import T from "@/utils/t";
-const t = new T("ar");
+export default function Home() {
+  useEffect(() => {
+    redirect(`/${navigator.languages[1]}/hadith`);
+  }, []);
 
-export const metadata: Metadata = {
-  title: "Hadith | Homepage",
-  description: "Random hadith for every refresh. Know more ahadeith.",
-};
-
-export default async function Home() {
-  redirect("/ar/hadith");
+  return "Redirecting...";
 }

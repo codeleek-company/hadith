@@ -1,16 +1,27 @@
 declare interface HadithResponse {
   data: {
-    id: string;
-    title: string;
-    hadeeth: string;
-    attribution: string;
-    grade: string;
-    explanation: string;
-    hints: Array;
-    categories: Array;
-    translations: Array;
-    words_meanings: Array;
-    reference: string;
+    collection: string;
+    bookNumber: string;
+    chapterId: string;
+    hadithNumber: string;
+    hadith: [
+      {
+        lang: string;
+        chapterNumber: number;
+        chapterTitle: string;
+        urn: number;
+        body: string;
+        grades: [];
+      },
+      {
+        lang: string;
+        chapterNumber: number;
+        chapterTitle: string;
+        urn: number;
+        body: string;
+        grades: [];
+      }
+    ];
   };
 }
 
