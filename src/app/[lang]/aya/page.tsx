@@ -1,14 +1,8 @@
 import getRandomAya from "@/utils/getRandomAya";
-import type { Metadata } from "next";
 import T from "@/utils/t";
 import Image from "next/image";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
-
-export const metadata: Metadata = {
-  title: "Hadith | Homepage",
-  description: "pageTitle",
-};
 
 interface SearchParams {
   lang: string;
