@@ -1,4 +1,3 @@
-import Header from "@/components/ui/header";
 import "@/styles/main.css";
 import type { Metadata } from "next";
 

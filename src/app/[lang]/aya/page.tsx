@@ -1,4 +1,4 @@
-import getRandomAya from "@/utils/getRadomAya";
+import getRandomAya from "@/utils/getRandomAya";
 import type { Metadata } from "next";
 import T from "@/utils/t";
 import Image from "next/image";
