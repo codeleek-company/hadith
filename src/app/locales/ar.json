@@ -1,4 +1,6 @@
 {
   "title-hadith": "حديث",
-  "title-aya": "أيه"
+  "title-aya": "أيه",
+  "failed-time-out": "فشل التحميل. حاول مره اخرى",
+  "failed-time-out-button": "حاول مجددا"
 }

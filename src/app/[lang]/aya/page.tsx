@@ -38,6 +38,17 @@ export default async function Hadith({ params }: { params: SearchParams }) {
       </>
     );
   } catch {
-    return "time out";
+    if (lang)
+      classes = "flex justify-center items-center h-screen flex-col gap-3 rwd";
+    else classes = "flex justify-center items-center h-screen flex-col gap-3";
+
+    return (
+      <div className={classes}>
+        {t.translate("failed-time-out")}
+        <a href={`/${params.lang}/aya`} className="p-3 rounded-md bg-gray-400">
+          {t.translate("failed-time-out-button")}
+        </a>
+      </div>
+    );
   }
 }
