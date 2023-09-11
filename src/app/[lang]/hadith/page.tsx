@@ -17,6 +17,8 @@ export default async function Hadith({ params }: { params: SearchParams }) {
   let lang = params.lang == "ar" ? 1 : 0;
   if (lang) classes = "rtl rwd";
 
+  classes += " bg-[#000a] min-h-screen";
+
   try {
     let hadith = response.hadith[lang].body;
     return (
@@ -39,6 +41,8 @@ export default async function Hadith({ params }: { params: SearchParams }) {
     if (lang)
       classes = "flex justify-center items-center h-screen flex-col gap-3 rwd";
     else classes = "flex justify-center items-center h-screen flex-col gap-3";
+
+    classes += " bg-[#000a]";
 
     return (
       <div className={classes}>

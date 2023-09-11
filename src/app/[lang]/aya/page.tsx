@@ -3,6 +3,12 @@ import T from "@/utils/t";
 import Image from "next/image";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Aya | Homepage",
+  description: "Random aya for every refresh. Know more ahadeith.",
+};
 
 interface SearchParams {
   lang: string;
@@ -18,6 +24,8 @@ export default async function Hadith({ params }: { params: SearchParams }) {
   let classes = "";
 
   if (lang) classes = "rtl rwd";
+
+  classes += " bg-[#000a] min-h-screen";
 
   try {
     let hadith = response.data.text;
@@ -41,6 +49,8 @@ export default async function Hadith({ params }: { params: SearchParams }) {
     if (lang)
       classes = "flex justify-center items-center h-screen flex-col gap-3 rwd";
     else classes = "flex justify-center items-center h-screen flex-col gap-3";
+
+    classes += " bg-[#000a]";
 
     return (
       <div className={classes}>

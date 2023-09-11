@@ -6,20 +6,15 @@ export default function Header({ lang }: { lang: number }) {
   let aya = ["Aya", "أيه"];
   let hadith = ["Hadith", "حديث"];
   let family = ["monospace", "rwd"];
-  let classes = `m-3 flex justify-between gap-3 ${family[lang]}`;
+  let button =
+    "bg-[#111] text-center w-[200px] transition-all duration-300 hover:bg-[#222] rounded-lg py-2 text-[1.5rem]";
 
   return (
-    <div className={classes}>
-      <Link
-        href={url[lang]}
-        className="w-[50%] bg-[#554b1a] text-center hover:bg-[#554b1ab4] rounded-3xl text-[1.5rem]"
-      >
+    <div className={`p-3 flex justify-center gap-3 ${family[lang]} bg-[#000a]`}>
+      <Link href={url[lang]} className={button}>
         {aya[lang]}
       </Link>
-      <Link
-        href={url2[lang]}
-        className="w-[50%] bg-[#554b1a] text-center hover:bg-[#554b1ab4] rounded-3xl text-[1.5rem]"
-      >
+      <Link href={url2[lang]} className={button}>
         {hadith[lang]}
       </Link>
     </div>

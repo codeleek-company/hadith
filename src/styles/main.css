@@ -25,8 +25,10 @@
 body {
   color: rgb(var(--foreground-rgb));
   font-family: monospace;
-  background: #2b2509;
+  background: #242424;
   min-height: 100vh;
+  background-image: url("/mosque.jpg");
+  background-size: cover;
 }
 .rtl {
   direction: rtl;
