@@ -5,7 +5,9 @@ export default async function Hadith({ stater }: { stater: any }) {
   let hadith =
     typeof response == "string"
       ? response
-      : response.hadith[1].body.replaceAll(/<p>?- /, "").replaceAll("</p>", "");
+      : response.hadith[1].body
+          .replaceAll(/<p>?-? /g, "")
+          .replaceAll("</p>", "");
 
   stater(hadith);
 
