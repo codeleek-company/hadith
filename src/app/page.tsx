@@ -1,6 +1,5 @@
 "use client";
 
-import { Suspense } from "react";
 import Hadith from "./hadith";
 import { useState } from "react";
 
@@ -20,9 +19,7 @@ export default function Homepage() {
         حديث
       </h2>
       <p className="text-center max-w-prose text-[1.6rem] p-3 mx-auto">
-        <Suspense fallback="جارى تحميل الحديث.....">
-          <Hadith stater={setHadith} />
-        </Suspense>
+        <Hadith stater={setHadith} />
       </p>
     </div>
   );
