@@ -1,11 +1,10 @@
 const axios = require("axios");
 
-export default async function getRandomAya(lang: number) {
+export default async function getRandomAya() {
   let aya = Math.floor(Math.random() * 6236);
-  let langs = ["en.asad", "ar.alafasy"];
   const options = {
     method: "GET",
-    url: `http://api.alquran.cloud/v1/ayah/${aya}/${langs[lang]}`,
+    url: `http://api.alquran.cloud/v1/ayah/${aya}/ar.alafasy`,
   };
 
   try {

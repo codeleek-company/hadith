@@ -1,21 +1,16 @@
 import Link from "next/link";
 
-export default function Header({ lang }: { lang: number }) {
-  let url = ["/en/aya", "/ar/aya"];
-  let url2 = ["/en/hadith", "/ar/hadith"];
-  let aya = ["Aya", "أيه"];
-  let hadith = ["Hadith", "حديث"];
-  let family = ["monospace", "rwd"];
+export default function Header() {
   let button =
     "bg-[#111] text-center w-[200px] transition-all duration-300 hover:bg-[#222] rounded-lg py-2 text-[1.5rem]";
 
   return (
-    <div className={`p-3 flex justify-center gap-3 ${family[lang]} bg-[#000a]`}>
-      <Link href={url[lang]} className={button}>
-        {aya[lang]}
+    <div className={`p-3 flex justify-center gap-3 rwd bg-[#000a]`}>
+      <Link href="/aya" className={button}>
+        أيه
       </Link>
-      <Link href={url2[lang]} className={button}>
-        {hadith[lang]}
+      <Link href="/hadith" className={button}>
+        حديث
       </Link>
     </div>
   );
