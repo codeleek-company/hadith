@@ -20,7 +20,7 @@ export default async function Hadith() {
     return (
       <>
         <Header />
-        <div className="rtl rwd bg-[#000a] min-h-screen">
+        <div className="rtl bg-[#000a] min-h-screen">
           <div className="text-[2.4rem] flex flex-col items-center py-3 pt-6">
             <div>أيه</div>
             <Image width="100" height="100" src="/images/moon.png" alt="moon" />
@@ -34,7 +34,7 @@ export default async function Hadith() {
     );
   } catch {
     return (
-      <div className="flex justify-center items-center h-screen flex-col gap-3 rwd bg-[#000a]">
+      <div className="flex justify-center items-center h-screen flex-col gap-3 bg-[#000a]">
         فشل التحميل. حاول مره اخرى
         <a href={`/aya`} className="p-3 rounded-md bg-gray-400">
           حاول مجددا

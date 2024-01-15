@@ -18,13 +18,9 @@
   }
 }
 
-.rwd {
-  font-family: "Ruwudu";
-}
-
 body {
+  font-family: "Ruwudu";
   color: rgb(var(--foreground-rgb));
-  font-family: monospace;
   background: #242424;
   min-height: 100vh;
   background-image: url("/mosque.jpg");
