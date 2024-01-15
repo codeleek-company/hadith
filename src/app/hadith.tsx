@@ -1,6 +1,6 @@
 import { getRandomHadith } from "@/app/getRandomHadith";
 
-export default async function Hadith({ stater }: { stater: any }) {
+export default async function Hadith() {
   const response = await getRandomHadith();
   let hadith =
     typeof response == "string"
@@ -8,8 +8,6 @@ export default async function Hadith({ stater }: { stater: any }) {
       : response.hadith[1].body
           .replaceAll(/<p>?-? /g, "")
           .replaceAll("</p>", "");
-
-  stater(hadith);
 
   return hadith;
 }
