@@ -1,5 +1,4 @@
 import HadithResponse from "@/types/hadith-response";
-
 const axios = require("axios");
 
 const defaultResponse = {
