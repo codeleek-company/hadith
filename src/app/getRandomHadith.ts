@@ -4,7 +4,7 @@ const axios = require("axios");
 
 const options = {
   method: "GET",
-  url: "https://api.sunnah.com/v1/hadiths/random",
+  url: "https://api.sunnah.com/v1/hadiths/random?t=" + Math.random(),
   headers: { "x-api-key": "SqD712P3E82xnwOAEOkGd5JZH8s9wRR24TqNFzjk" },
 };
 
